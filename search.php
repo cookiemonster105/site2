@@ -5,7 +5,16 @@
 
     <main>
             <?php if (have_posts()) : ?>
+
+                <h2> Search Results for: <?php echo get_search_query() ;?></h2>
+                
+            <p>Our findings for
+            <?php /* Search Count */
+            $allsearch = new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles/pages'); wp_reset_query(); ?></p>
+
+
                 <?php while(have_posts()) : the_post() ; ?>
+
                     <article class="post">
                      <h2 class="title"> <a href="<?php the_permalink() ; ?>"> 
                      <?php the_title() ; ?></a></h2>
@@ -41,16 +50,14 @@
 
                     <?php get_search_form(); ?> 
                     
-        
+            
 
             <?php endif; ?>
             <?php comments_template(); ?>
-    </main>  
- 
+    </main>
+      
+    <?php get_sidebar(); ?>
 
-  <!-- <aside> -->
-  <?php get_sidebar(); ?>
-  <!-- </aside> -->
 
 </div><!-- end wrapper -->
 

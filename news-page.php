@@ -8,7 +8,7 @@
 
 
         <?php if(have_posts()) : ?>
-        
+     
 
             <?php while(have_posts()): the_post(); ?>
             <?php the_content(); ?>
@@ -18,8 +18,9 @@
 
         <?php endif; ?>
     </main>
-    <aside>
-    </aside>
+    <aside id="secondary" class="widget-area">
+<?php dynamic_sidebar('sidebar-news'); ?>
+</aside>
 </div><!-- end wrapper -->
 
 <?php get_footer(); ?>

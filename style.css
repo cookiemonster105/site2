@@ -9,48 +9,115 @@ Aug 2022*/
   }
   
   body{
-    background: peachpuff;
+    background: #ffffff;
+	font-family: Helvetica, Arial, Sans-Serif;
   }
 
   header{
-    background-color: yellow;
-    height: 200px;
+	background: rgb(64,34,19);
+background: linear-gradient(355deg, rgba(64,34,19,1) 0%, rgba(240,96,24,1) 23%, rgba(255,255,255,1) 100%);
   }
 
+
   #top{
-    background: orange;
-    padding: 10px;
+   
+    padding: 5px 30px 10px 0;
+	margin:10px;
+	;
+
+  }
+
+  #inner-header{
+	padding: 10px 20px 10px 0;
+	clear: both;
   }
 
   #hero{
-    background:red;
-    height: 400px;
+   background-image: url(https://wjournee.me/it270/site2/wp-content/themes/smarttech/images/earth-sun-rising.jpg);
+   max-width: 100%;
   }
 
   #wrapper{
     max-width: 1200px;
     margin: 20px auto;
-    border: grey 5px solid;
-    height: 500px;
+  }
+
+  .error404 #wrapper, .search #wrapper{
+	margin: 140px auto 0 auto;
   }
 
   main{
     width: 62%;
     float:left;
-    background-color: salmon;
+  }
+
+  .inner-footer{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px 0;
+	background: #0060a8;
+	color:#f0d800;
+  }
+
+  .row{
+	overflow: hidden;
+  }
+
+  .third{
+	width: 31.9%;
+	float: left;
+	margin-right: 2.12%;
+  }
+
+  .third:last-of-type{
+	margin-right: 0;
+  }
+  #reply-title{
+	margin-top: 80px;
+	margin-bottom: 10px;
+  }
+
+  #comments{
+	padding: 10px;
   }
 
   aside{
     float:right;
     width: 35%;  
     height:350px;
-    background: coral;  
+    border: 2px solid #11224d; 
+	background-color: aliceblue;
   }
 
-  footer{
-    background: grey;
-    height: 300px;
+  aside h2 {
+	background:#0060a8;
+	font-size: 1.4em;
+	padding: 3%;
+	color:aliceblue;
+	margin-bottom: 10px;
+  }
+
+  aside ul {
+	margin-left: 5%;
+	margin-bottom: 8px;
+	list-style-type: none;
+  }
+
+  aside a {
+	text-decoration: none;
+  }
+
+  aside a:visited {
+	color:#11224d;
+  }
+
+  footer {
+    background: #0060a8;;
     clear: both;
+  }
+
+  #searchform {
+	float: right;
   }
 
   .nav-button{
@@ -58,11 +125,10 @@ Aug 2022*/
   }
 
 #site-navigation{
- /*float: right;*/
-  margin-right: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  float: right;
+  padding-bottom: 5px;
+  font-size: 1.3em;
+
 }
 
 #site-navigation li{
@@ -70,9 +136,11 @@ Aug 2022*/
   list-style-type: none;
   margin-left: 15px;
   border-bottom: 1px solid grey;
+  /* width: 180px; */
+ 
 }
 
-#site-navigation > li: :last-of-type{
+#site-navigation > li :last-of-type{
   margin-right: 15px;
 }
 
@@ -81,6 +149,7 @@ Aug 2022*/
 }
 .sub-menu{
   display: none;
+  font-size: .75em;
 }
 
 #site-navigation li:hover .sub-menu{
@@ -88,16 +157,19 @@ Aug 2022*/
   position: absolute;
   background-color: aliceblue;
   padding: 5px;
-  top: 24px;
-  
+  top: 70px;
+  width:300px;  
 }
 
 #site-navigation li:hover .sub-menu li{
   margin-left: 0;
   float: none;
+  width:fit-content;
+  border-bottom: solid grey 1px;
+  line-height: 1.2;
 }
 
-#search{
+#top #search{
   float: right;
   display: inline;
 }
@@ -111,8 +183,76 @@ Aug 2022*/
   p{
     margin-bottom: 15px;
   }
+  h1{ 
+	font-family: 'Squada One';
+  }
   .title{
     font-size: 2em;
+  }
+  .home h1{
+	font-size: 3.5em;
+	text-align: center;
+	margin-bottom: 15px;
+	color:#f98125
+  }
+
+  h2{
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 15px;
+	color:#f98125
+  }
+
+ h3{
+	font-size: 1.5em;
+	text-align: center;
+	margin-bottom: 15px;
+	color:#f98125
+  }
+
+  .about h3{
+	font-size: 2em;
+	margin-bottom: 15px;
+	color:#f98125
+  }
+
+  
+.inner-footer{
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 10px 0;
+	text-align: center;
+}
+.inner-footer li{
+	/*float:left;*/
+	margin-right:25px;
+}
+
+.inner-footer ul{
+	/* height:60px; */
+	line-height: 60px;
+	font-size: .875em;
+	list-style-type: none;
+	margin-right:25px;
+}
+.inner-footer a{
+	color: #11224d;
+}
+
+.inner-footer li{
+	float: left;
+	margin-right: 25px;
+}
+
+  .inner-footer h2{
+	font-size: 1.5em;
+	text-align: center;
+	margin-bottom: 5px;
+  }
+  .third h3{
+	font-size:1.3em;
+	padding: 3%;
+
   }
 
   /* comment form CSS */
@@ -147,6 +287,76 @@ Aug 2022*/
 .commentlist{
   margin-left: 30px;
   margin-bottom: 15px;
+}
+
+
+/* Begining of media queries */
+@media only screen and (max-width: 1450px) {
+	#inner-header{
+		padding: 10px 30px 10px 30px;
+	}
+	
+	#wrapper{
+		max-width: 1200px;
+		margin: 20px auto 40px auto;
+	}
+#inner-header{
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 10px 0;
+    padding: 10px 20px 10px 0;
+	clear:both;
+}
+
+#hero{
+	background-image:url(https://wjournee.me/it270/site2/images/earth-sun-rising.jpg);
+	background-attachment: fixed;
+	background-size: 100%;
+	background-position: 0 100px;
+	min-height: 550px;
+	max-width: 100%;
+	background-repeat: no-repeat;
+}
+#hero-img{
+	display: none;
+}
+
+main.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
+	width: 100%;
+	height: auto;
+}
+
+.inner-page #hero{
+	background-image:url(https://wjournee.me/it270/site2/images/earth-sun-rising.jpg);
+
+	background-attachment: fixed;
+	background-size: 100%;
+	background-position: 0 110px;
+	min-height: 550px;
+	max-width: 100%;
+	background-repeat: no-repeat;
+}
+
+#wrapper{
+    max-width: 1700px;
+    margin: 20px auto;
+}
+
+	.home #hero{
+		background-image: none;
+		margin-top: 100%;
+		min-height: auto;
+	}
+	.inner-page #hero{
+		background-image: none;
+		margin-top: 100%;
+		min-height: auto;
+	}
+	#hero img {
+		display: block;
+		width:40%;
+		height: auto;
+	}
 }
 
 /*Start astuteo Menu*/
@@ -217,17 +427,19 @@ Aug 2022*/
     position: static;
     background:none;
     padding: 0px;
+	width:auto;
   }
 
   #site-navigation li{
     float: none;
     margin-left: 0px;
+
   }
   
 	.primary-nav li a {
 		display: block;
 		width: 100%;
-		padding: 10px 5%;
+		padding: 30px 5%;
 		font-size: 14px;
 		font-weight: bold;
 		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
